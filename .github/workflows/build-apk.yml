@@ -1,29 +1,33 @@
 name: Build APK
 
-on:
+'on':
   push:
-    branches: [ main ]
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
 
 jobs:
   build:
     runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
 
-    steps:步骤:
-    - uses: actions/checkout@v3    - 使用: actions/checkout@v3
+      - name: Setup Flutter
+        uses: subosito/flutter-action@v2
+        with:与:
+          channel: stable通道: 稳定版
 
-    - uses: actions/setup-java@v3    - 使用: actions/setup-java@v3
-      with:参数:
-        distribution: 'temurin'发行: '特穆林'发行: '特穆林'发行: '特穆林'
-        java-version: '17'Java版本: '17'
+      - name: Install dependencies      - 名称: 安装依赖
+        run: flutter pub get
 
-    - uses: subosito/flutter-action@v2    - 用途: subosito/flutter-action@v2
-      with:参数:
-        flutter-version: '3.19.0'Flutter版本: '3.19.0'
+      - name: Build APK
+        run: flutter build apk --release运行: flutter build apk --release
 
-    - run: flutter pub get    - 运行: flutter pub get
-    - run: flutter build apk --release    - 运行: flutter build apk --release
-
-    - uses: actions/upload-artifact@v4    - 使用: actions/upload-artifact@v4
-      with:参数:
-        name: app-release-apk名称: app-release-apk
-        path: build/app/outputs/flutter-apk/app-release.apk路径: build/app/outputs/flutter-apk/app-release.apk
+      - name: Upload APK      - 名称: 上传APK
+        uses: actions/upload-artifact@v4
+        with:
+          name: app-release.apk名称: app-release.apk
+          path: build/app/outputs/flutter-apk/app-release.apk路径: build/app/outputs/flutter-apk/app-release.apk
