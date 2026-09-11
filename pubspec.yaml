@@ -1,0 +1,19 @@
+name名称: head_app头应用
+description: 头数识别App描述: 头数识别App
+publish_to: 'none'发布到: '无'
+version: 1.0.0+1版本: 1.0.0+1
+
+environment:环境:
+  sdk: '>=3.0.0 <4.0.0'SDK: '>=3.0.0 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+  google_mlkit_text_recognition: ^0.15.0
+  image_picker: ^1.1.2
+  sqflite: ^2.3.3
+  path: ^1.9.0
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
