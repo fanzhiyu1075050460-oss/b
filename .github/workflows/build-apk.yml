@@ -1,6 +1,6 @@
 name: Build APK
 
-'on':
+on:
   push:
     branches:
       - main
@@ -17,17 +17,17 @@ jobs:
 
       - name: Setup Flutter
         uses: subosito/flutter-action@v2
-        with:与:
-          channel: stable通道: 稳定版
+        with:与与：与与：与与：与与：与与：与与：与与：与与：与与：与与：与:
+          channel: stable通道: 稳定通道: 稳定版稳定通道: 稳定通道: 稳定版稳定通道: 稳定通道: 稳定版稳定通道: 稳定通道: 稳定版稳定通道: 稳定通道: 稳定版稳定通道: 稳定通道: 稳定版稳定通道: 稳定通道: 稳定版稳定通道: 稳定通道: 稳定版
 
-      - name: Install dependencies      - 名称: 安装依赖
-        run: flutter pub get
+      - name: I我nstall dependencies      - 名称: 安装依赖项 - 名称: 安装依赖
+        run: flutter pub get运行: flutter pub get运行: flutter pub get运行: flutter pub get运行: flutter pub get运行: 运行 flutter pub get: flutter pub get运行: 运行 flutter pub get: flutter pub get运行: 运行 flutter pub get: flutter pub get运行: flutter pub get运行: flutter pub get运行: flutter pub get运行: flutter pub get运行: flutter pub get运行: 运行 flutter pub get: flutter pub get运行: 运行 flutter pub get: f运行 flutter pub get: flutter pub get运行: 运行 flutter pub get: f运行 flutter pub get: flutter pub get运行: flutter pub get运行: flutter pub get运行: flutter pub get运行: flutter pub get运行: flutter pub get运行: 运行 flutter pub get: flutter pub get运行: 运行 flutter pub get: flutter pub get运行: 运行 flutter pub get: flutter pub get运行: flutter pub get运行: flutter pub get运行: flutter pub get运行: flutter pub get运行: flutter pub get运行: 运行 flutter pub get: flutter pub get运行: 运行 flutter pub get: flutter pub get运行: 运行 flutter pub get: flutter pub get
 
-      - name: Build APK
-        run: flutter build apk --release运行: flutter build apk --release
+      - name: Build APK      - 名称: 构建APK - 名称: 构建APK
+        run: flutter build apk --release运行: flutter build apk --release运行: flutter build apk --release运行: flutter build apk --release运行: flutter build apk --release运行: flutter build apk --release运行: flutter build apk --release运行: flutter build apk --release运行: flutter build apk --release运行: flutter build apk --release运行: flutter build apk --release运行: flutter build apk --release运行: flutter build apk --release运行: flutter build apk --release运行: flutter build apk --release运行: flutter build apk --release运行: flutter build apk --release运行: flutter build apk --release运行: flutter build apk --release运行: flutter build apk --release运行: flutter build apk --release运行: flutter build apk --release运行: flutter build apk --release运行: flutter build apk --release运行: flutter build apk --release运行: flutter build apk --release运行: flutter build apk --release运行: flutter build apk --release运行: flutter build apk --release运行: flutter build apk --release运行: flutter build apk --release运行: flutter build apk --release运行: flutter build apk --release运行: flutter build apk --release运行: flutter build apk --release运行: flutter build apk --release运行: flutter build apk --release运行: flutter build apk --release运行: flutter build apk --release运行: flutter build apk --release运行: flutter build apk --release运行: flutter build apk --release运行: flutter build apk --release运行: flutter build apk --release运行: flutter build apk --release运行: flutter build apk --release运行: flutter build apk --release运行: flutter build apk --release运行: flutter build apk --release运行: flutter build apk --release运行: flutter build apk --release运行: flutter build apk --release运行: flutter build apk --release运行: flutter build apk --release运行: flutter build apk --release运行: flutter build apk --release运行: flutter build apk --release运行: flutter build apk --release运行: flutter build apk --release运行: flutter build apk --release运行: flutter build apk --release运行: flutter build apk --release运行: flutter build apk --release运行: 运行: flutter build apk --release运行: flutter build apk --release运行: flutter build apk --release运行: flutter build apk --release运行: flutter build apk --release运行: flutter build apk --release运行: flutter build apk --release运行: flutter build apk --release运行: flutter build apk --release运行: flutter build apk --release运行: flutter build apk --release运行: flutter build apk --release运行: flutter build apk --release运行: flutter build apk --release运行: flutter build apk --release运行: flutter build apk --release运行: flutter build apk --release运行: flutter build apk --release运行: flutter build apk --release运行: flutter build apk --release运行: flutter build apk --release运行: flutter build apk --release运行: flutter build apk --release运行: flutter build apk --release运行: flutter build apk --release运行: flutter build apk --release运行: flutter build apk --release运行: flutter build apk --release运行: flutter build apk --release运行: flutter build apk --release运行: flutter build apk --release运行: flutter build apk --release运行: flutter build apk --release运行: flutter build apk --release运行: flutter build apk --release运行: flutter build apk --release运行: flutter build apk --release运行: flutter build apk --release运行: flutter build apk --release运行: flutter build apk --release运行: flutter build apk --release运行: flutter build apk --release运行: flutter build apk --release运行: flutter build apk --release运行: flutter build apk --release运行: flutter build apk --release运行: flutter build apk --release运行: flutter build apk --release运行: flutter build apk --release运行: flutter build apk --release运行: flutter build apk --release运行: flutter build apk --release运行: flutter build apk --release运行: flutter build apk --release运行: flutter build apk --release运行: flutter build apk --release运行: flutter build apk --release运行: flutter build apk --release运行: flutter build apk --release运行: flutter build apk --release运行: flutter build apk --release运行: flutter build apk --release运行: flutter build apk --release运行: flutter build apk --release
 
-      - name: Upload APK      - 名称: 上传APK
-        uses: actions/upload-artifact@v4
-        with:
+      - name: Upload APK      - 名称: 上传APK      - 名称: 上传APK - 名称: 上传APK
+        uses: actions/upload-artifact@v4使用: actions/upload-artifact@v4
+        with:与与：与与：与与：与与：与与：与与：与与：与与：与与：与与：与:
           name: app-release.apk名称: app-release.apk
           path: build/app/outputs/flutter-apk/app-release.apk路径: build/app/outputs/flutter-apk/app-release.apk
