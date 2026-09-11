@@ -1,0 +1,16 @@
+import 'package:google_mlkit_text_recognition/google_mlkit_text_recognition.dart';
+import 'package:image_picker/image_picker.dart';
+
+class OcrService {
+  static final _recognizer = TextRecognizer();
+  static final _picker = ImagePicker();
+
+  static Future<String?> pickAndRecognize(ImageSource source) async {
+    final file = await _picker.pickImage(source: source);
+    if (file == null) return null;
+
+    final input = InputImage.fromFilePath(file.path);
+    final result = await _recognizer.processImage(input);
+    return result.text;
+  }
+}
