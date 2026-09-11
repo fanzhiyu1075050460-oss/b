@@ -1,0 +1,16 @@
+import导入 'package:google_mlkit_text_recognition/google_mlkit_text_recognition.dart';
+import导入 'package:image_picker/image_picker.dart';
+
+class OcrService {类OcrService{
+  static final _recognizer = TextRecognizer();
+  static final _picker = ImagePicker();静态 最终_picker = ImagePicker();静态 最终_picker = ImagePicker();静态 最终_picker = ImagePicker();
+
+  static Future<String?> pickAndRecognize(ImageSource source) async {静态Future<String?> pickAndRecognize(ImageSource source)异步 {
+    final最终 file = await等待 _picker.pickImage(source: source);最终文件 =await_picker.pickImage(source: source);
+    if (file == null空) return null;如果(文件 ==空) 返回 空;如果(文件 ==空) 返回 null;如果(文件 ==空) 返回 空;如果(文件 == null空)return 返回 null;如果(文件 ==空) 返回 空;如果(文件 ==空) 返回返回 null;如果(文件 ==空) 返回 空;
+
+    final input = InputImage.fromFilePath(file.path);最终input = InputImage.fromFilePath(file.path);最终input = InputImage.fromFilePath(file.path);最终input = InputImage.fromFilePath(file.path);
+    final最终 result = await等待 _recognizer.processImage(input);最终result =await_recognizer.processImage(input);final最终结果 = await等待 _recognizer.processImage(input);最终结果 =await_recognizer.processImage(input);final最终结果 = await等待 _recognizer.processImage(input);最终结果 =await_recognizer.processImage(input);final最终结果 = await等待 _recognizer.processImage(input);最终结果 =await_recognizer.processImage(input);最终结果 = await最终结果 = await最终结果 = await最终结果 = awaitfinal最终结果 = await等待 _recognizer.processImage(input);最终结果 =await_recognizer.processImage(input);final最终结果 = await等待 _recognizer.processImage(input);最终结果 =await_recognizer.processImage(input);final最终结果 = await等待 _recognizer.processImage(input);最终结果 =await_recognizer.processImage(input);final最终结果 = await等待 _recognizer.processImage(input);最终结果 =await_recognizer.processImage(input);最终结果 = await最终结果 = await最终结果 = await最终结果 =await _recognizer.processImage(input);最终结果 = await_recognizer.processImage(input);最终结果 = await _recognizer.processImage(input);最终结果 = await_recognizer.processImage(input);最终结果 = await _recognizer.processImage(input);最终结果 = await_recognizer.processImage(input);最终结果 = await _recognizer.processImage(input);最终结果 = await_recognizer.processImage(input);最终结果 = await最终结果 = await最终结果 =await _recognizer.processImage(input);最终结果 =await_recognizer.processImage(input);最终结果 = await _recognizer.processImage(input);最终结果 =await_recognizer.processImage(input);最终结果 = await _recognizer.processImage(input);最终结果 =await_recognizer.processImage(input);最终结果 = await _recognizer.processImage(input);最终结果 =await_recognizer.processImage(input);最终结果 = await最终结果 =await _recognizer.processImage(input);最终结果 =await_recognizer.processImage(input);最终结果 = await _recognizer.processImage(input);最终结果 =await_recognizer.processImage(input);最终结果 = await _recognizer.processImage(input);最终结果 =await_recognizer.processImage(input);最终结果 = await _recognizer.processImage(input);最终结果 =await_recognizer.processImage(input);最终结果 =await _recognizer.processImage(input);最终结果 =await_recognizer.processImage(input);最终结果 = await _recognizer.processImage(input);最终结果 =await_recognizer.processImage(input);最终结果 = await _recognizer.processImage(input);最终结果 =await_recognizer.processImage(input);最终结果 = await _recognizer.processImage(input);最终结果 =await_recognizer.processImage(input);
+    return result.text;返回result.text;
+  }
+                                                                    }
