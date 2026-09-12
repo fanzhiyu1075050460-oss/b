@@ -1,19 +1,22 @@
-name: b
-description: A new Flutter project.
-publish_to: none
-version: 1.0.0+1
+name: Build APK
 
-environment:
-  sdk: '>=3.0.0 <4.0.0'
+on:
+  push:
+    branches: [main]
 
-dependencies:
-  flutter:
-    sdk: flutter
-  google_mlkit_text_recognition: ^0.15.0
-  image_picker: ^1.1.2
-  sqflite: ^2.3.3
-  path: ^1.9.0
-
-dev_dependencies:
-  flutter_test:
-    sdk: flutter
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: subosito/flutter-action@v2
+        with:
+          flutter-version: '3.19.6'
+          cache: false
+      - run: flutter --version
+      - run: flutter pub get --verbose
+      - run: flutter build apk --release
+      - uses: actions/upload-artifact@v4
+        with:
+          name: app-release.apk
+          path: build/app/outputs/flutter-apk/app-release.apk
